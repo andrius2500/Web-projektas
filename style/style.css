@@ -1,0 +1,698 @@
+/* TODO:
+	1.make scrolling animation
+	2.fix wrapper,containers etc so that they wouldn't go out of bounds*/
+
+/* core style */
+
+body {
+	line-height: 1.5;
+	text-align: center;
+	margin: 0;
+	overflow-x: hidden;
+}
+
+img {
+	width: 100%;
+}
+
+#showcase h1 {
+	width: 180px;
+	position: fixed;
+	top: -10px;
+	left: 40px;
+	z-index: 1;
+}
+
+/* header showcase */
+
+#showcase {
+	min-height: 70px;
+}
+
+.top-header{
+	position: fixed;
+	top: 0%;
+	background-color: rgb(6, 30, 71);
+	background-position: center;
+	background-size: cover;
+	width: 100%;
+	height: 87px;
+	z-index: 1;
+	opacity: 0.8;
+}
+
+/* menu button */
+
+.my-links-wrapper {
+	display: flex;
+	flex-direction: row;
+	justify-content: space-around;
+	width: 70%;
+	position: fixed;
+	top: 3%;
+	left: 210px;
+	list-style-type: none;
+	z-index: 1;
+}
+
+.my-links a{
+	text-decoration: none;
+	font-size: 18px;
+	color: rgb(255, 182, 52);
+	font-family: 'Ubuntu', sans-serif;
+}
+
+.my-links a:hover {
+	color: white;
+}
+
+.social-pages {
+	display: flex;
+	position: fixed;
+	right: -2%;
+	top: 5px;
+	list-style-type: none;
+	z-index: 1;
+}
+
+.facebook-page, .instagram-page {
+	margin-left: 25px;
+	width: 20%;
+}
+
+.facebook-page:hover, .instagram-page:hover {
+	cursor: pointer;
+}
+
+/* section Top Page */
+
+.ollin-background {
+	width: 100%;
+	height: 980px;
+	position: relative;
+	background-image: url(../images/bubbles-header.jpg);
+	background-attachment: fixed;
+	background-position: center;
+	background-size: cover;
+}
+
+.ollin-background-text  {
+	font-family: 'Ubuntu', sans-serif;
+	font-size: 4vw;
+	position: absolute;
+	top: 40%;
+	left: 19%;
+	color: rgb(255, 182, 52);
+}
+
+/* section A */
+
+#section-a {
+	width: 100%;
+	height: 1050px;
+	padding: 0px;
+	background-color: rgb(255, 182, 52);
+}
+
+.content-title-about-us {
+	font-family: 'Ubuntu', sans-serif;
+	color: rgb(6, 30, 71);
+	font-size: 60px;
+	margin-bottom: 0px;
+	position: relative;
+	margin-top: 0px;
+	padding-bottom: 30px;
+}
+
+.first-column {
+	float: left;
+	width: 50%;
+	padding: 10px;
+	height: 905px;
+}
+
+.second-column {
+	position: relative;
+	top: 100px;
+}
+
+.second-column video {
+	width: 45%;
+	height: 600px;
+	background-color: black;
+	outline: none;
+}
+
+.about-us-paragraph {
+	font-family: 'Ubuntu', sans-serif;
+	color: rgb(6, 30, 71);
+	font-size: 50px;
+	height: 200px;
+	position: relative;
+	top: 200px;
+}
+
+/* section B */
+
+#section-b {
+	width: 100%;
+	height: 1050px;
+	padding: 0px;
+	background-color: rgb(6, 30, 71);
+}
+
+.content-title-special-offer {
+	font-family: 'Ubuntu', sans-serif;
+	color: rgb(255, 182, 52);
+	font-size: 60px;
+	margin: 0px;
+}
+
+.special-offer-container {
+	height: 880px;
+	width: 50%;
+	float: right;
+}
+
+.special-offer-paragraph {
+	font-family: 'Ubuntu', sans-serif;
+	color: rgb(255, 182, 52);
+	font-size: 50px;
+	position: relative;
+	top: 250px;
+}
+
+/* sectio B slideshow */
+
+.slide-container {
+	width: 40%;
+	position: relative;
+	top: 20%;
+	left: 5%;
+}
+
+.previous-button {
+	border-width: 0 5px 5px 0;
+	padding: 10px;
+	background-color: transparent;
+	transform: rotate(-230deg);
+	float: left;
+	outline: none;
+	position: relative;
+	bottom: 60px;
+	left: 20px;
+}
+
+.next-button {
+	border-width: 0 5px 5px 0;
+	padding: 10px;
+	background-color: transparent;
+	transform: rotate(-45deg);
+	float: right;
+	outline: none;
+	position: relative;
+	bottom: 60px;
+	right: 20px;
+}
+
+/* section C */
+
+#section-c {
+	background-color: rgb(255, 182, 52);
+	height: 1000px;
+}
+
+.top-products-heading {
+	font-family: 'Ubuntu', sans-serif;
+	color: rgb(6, 30, 71);
+	font-size: 60px;
+	margin: 0px;
+}
+
+.top-products-wrapper {
+	display: flex;
+	position: relative;
+	top: 5%;
+}
+
+.product {
+	margin: 10px;
+	font-family: 'Ubuntu', sans-serif;
+	color: rgb(6, 30, 71);
+}
+
+.product h3 {
+	font-size: 25px;
+}
+
+.product-image {
+	border-radius: 350px;
+}
+
+/* section D */
+
+#section-d {
+	width: 100%;
+	height: 1050px;
+	padding: 0px;
+	background-color: rgb(6, 30, 71);
+}
+
+.registration-form-heading {
+	font-family: 'Ubuntu', sans-serif;
+	color: rgb(255, 182, 52);
+	font-size: 60px;
+	position: relative;
+	margin-top: 0px;
+}
+
+.registration-form-paraghraph-wrapper {
+	float: left;
+	width: 50%;
+	padding: 10px;
+	height: 860px;
+}
+
+.registration-form-paraghraph {
+	font-family: 'Ubuntu', sans-serif;
+	color: rgb(255, 182, 52);
+	font-size: 50px;
+	position: relative;
+	top: 200px;
+}
+
+.registration-information-container {
+	position: relative;
+	top: 11%;
+}
+
+.contact-form {
+	width: 35%;
+	margin: auto;
+	background-color: rgb(0,0,0,0.8);
+	padding: 20px 50px 40px 50px;
+	border-radius: 30px;
+	display: flex;
+	flex-direction: column;
+}
+
+.input-wrapper {
+	display: flex;
+	flex-direction: column;
+}
+
+.information-input {
+	margin: 10px 0;
+	background-color: transparent;
+	border: 0;
+	border-bottom: 2px solid rgb(255, 182, 52);
+	padding: 30px;
+	color: rgb(255, 182, 52);
+}
+
+.submit-button {
+	background-color: rgb(255, 182, 52);
+	padding: 15px;
+	margin-top: 15px;
+	border-radius: 10px;
+	color: rgb(6, 30, 71);
+	text-transform: uppercase;
+	width: 100%;
+	font-weight: bold;
+}
+
+/* section E */
+
+#section-e {
+	width: 100%;
+	height: 900px;
+	background-color: rgb(255, 182, 52);
+}
+
+.companies-contacts-heading {
+	font-family: 'Ubuntu', sans-serif;
+	color: rgb(6, 30, 71);
+	font-size: 60px;
+}
+
+.companies-information {
+	width: 100%;
+	float: right;
+	position: relative;
+	color: rgb(6, 30, 71);
+	font-size: 40px;
+	font-family: 'Ubuntu', sans-serif;
+}
+
+.companies-information a{
+	text-decoration: none;
+	color: rgb(6, 30, 71);
+}
+
+.company-email {
+	position: relative;
+	top: -20px;
+}
+
+.companies-information a:hover {
+	color: white;
+}
+
+.companies-location-map {
+	width: 100%;
+	height: 450px;
+	position: relative;
+	overflow: hidden;
+}
+
+.companies-location-map iframe {
+	width: 100%;
+}
+
+.copyright {
+	position: relative;
+	bottom: -3%;
+	height: 70px;
+	background-color: #4a4949;
+}
+
+.copyright p {
+	position: relative;
+	top: 40%;
+	font-size: 20px;
+	font-family: 'Poppins', sans-serif;
+	color: #a3a3a3;
+}
+
+/* planšetė */
+@media only screen and (max-width: 1200px) {
+
+/* showcase and links */
+	#showcase h1 {
+		width: 150px;
+		top: -5px;
+	}
+
+	.my-links-wrapper {
+		position: fixed;
+		left: 19%;
+	}
+
+	.my-links a {
+		font-size: 14px;
+	}
+
+	.facebook-page, .instagram-page {
+		width: 16%;
+	}
+
+	.social-pages {
+		right: -4%;
+		top: 1%;
+	}
+
+	.ollin-background-text {
+		font-size: 5vw;
+		left: 15%;
+	}
+
+/* section A */
+	.second-column video {
+		height: 400px;
+		position: relative;
+		top: 60px;
+	}
+
+/* section B */
+	
+	.slide-container {
+		width: 45%;
+		position: relative;
+		top: 20%;
+		left: 5%;
+	}
+
+/* section D */
+
+	.registration-form-paraghraph {
+		font-size: 40px;
+	}
+
+}
+
+/* mobilus */
+@media only screen and (max-width: 1000px) {
+
+/* showcase */
+
+	.top-header {
+		height: 70px;
+	}
+
+	#showcase h1 {
+		width: 145px;
+		top: -10px;
+	}
+
+	.social-pages {
+		width: 210px;
+		position: fixed;
+		left: 150px;
+		top: 0%
+	}
+
+	.my-links {
+		z-index: 1;
+	}
+
+	.ollin-background-text {
+		font-size: 7vw;
+		position: absolute;
+		left: 0%;
+	}
+
+/* burger menu */
+
+	.my-links a {
+		color: white;
+		position:relative;
+		left: -50%;
+		top: 40%;
+		font-size: 15px;
+	}
+
+	.my-links {
+		position: fixed;
+		top: 53px;
+		left: 0%;
+		width: 100%;
+		height: 200px;
+		background-color: rgb(6, 30, 71);
+		opacity: 0.8;
+		transform: translateY(-135%);
+	}
+
+	.my-links a:hover {
+		color: rgb(255, 182, 52);
+	}
+	
+	.my-links-wrapper {
+		display: flex;
+		flex-direction: column;
+		margin-top: -7px;
+		position: relative;
+		left: 20%;
+		width: 40%;
+		height: 100%;
+	}
+	
+	.my-links-wrapper a {
+		position: relative;
+		left: 0%;
+	}
+		
+	.menu-active {
+		transform: translateY(0%);
+		transition: 1s;
+	}
+
+	.burger-menu {
+		width: 38px;
+		height: 3%;
+		position: fixed;
+		z-index: 1;
+		top: 1%;
+		right: 9px;
+	}
+
+	.line1 {
+		width: 30px;
+		height: 5px;
+		margin: 4px;
+		background-color: white;
+	}
+
+	.line2 {
+		width: 30px;
+		height: 5px;
+		margin: 4px;
+		background-color: white;
+	}
+
+	.line3 {
+		width: 30px;
+		height: 5px;
+		margin: 4px;
+		background-color: white;
+	}
+
+/* section A */
+
+	#section-a {
+		width: 100%;
+		height: 950px;
+	}
+
+	.second-column video {
+		position: relative;
+		width: 80%;
+		height: 450px;
+		top: -800px;
+	}
+
+	.about-us-paragraph {
+		font-size: 30px;
+		position: relative;
+		left: 50%;
+		top: 0px;
+	}
+
+/* section B */
+
+	#section-b {
+		height: 950px;
+		width: 100%;
+	}
+
+	.content-title-special-offer {
+		width: 100%;
+		display: flex;
+		flex-direction: column;
+		position: relative;
+		top: -95px;
+	}
+
+	.special-offer-container {
+		width: 100%;
+		height: 700px;
+	}
+
+	.special-offer-paragraph {
+		font-size: 35px;
+		position: relative;
+		top: -8%;
+	}
+
+/* sectio B slideshow */
+
+	.slide-container {
+		width: 75%;
+		position: relative;
+		top: -550px;
+		left: 12%;
+	}
+	
+/* Section C */
+
+	#section-c {
+		height: 1900px;
+	}
+	
+	.top-products-heading {
+		width: 100%;
+		display: flex;
+		flex-direction: column;
+	}
+	
+	.top-products-wrapper {
+		display: flex;
+		flex-direction: column;
+		position: relative;
+		top: 1%;
+		left: 13%;
+	}
+
+	.product img {
+		border-radius: 0px;
+		width: 60%;
+	}
+	
+/* Section D */
+
+	.registration-form-paraghraph {
+		font-size: 30px;
+		position: relative;
+		top: 0px;
+	}
+
+	.registration-form-paraghraph-wrapper {
+		width: 100%;
+	}
+
+	.registration-information-container {
+		position: relative;
+		top: -650px;
+	}
+
+	.contact-form {
+		padding: 10px 40px 30px 40px;
+		width: 55%;
+	}
+
+	.information-input {
+		padding: 15px;
+	}
+
+/* Section E */
+
+	#section-e {
+		height: 900px;
+	}
+
+	.companies-information {
+		font-size: 30px;
+		position: relative;
+		top: -3%;
+	}
+
+	.copyright {
+		position: relative;
+		top: 11%;
+	}
+
+}
+
+/* seni mobilūs */
+
+@media only screen and (max-width: 520px) {
+	
+/* section C */
+	
+	#section-c {
+		height: 1700px;
+	}
+		
+/* section D */
+	
+	.registration-information-container {
+		position: relative;
+		top: -600px;
+	}
+	
+/* section E */
+	
+	#section-e {
+		height: 1000px;
+	}
+
+}
